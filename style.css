@@ -1,0 +1,155 @@
+style
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:linear-gradient(rgba(0,8,51,0.9),rgba(0,8,51,0.9));
+    color: white;
+}
+
+/*grade background*/
+.topnav {
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow:hidden;
+}
+
+/*top header*/
+.topnav a {
+    float: left;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*navbar*/
+.navbar-light{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*icon on the header*/
+.icon{
+    max-width: 30px;
+}
+
+/*icon grupo*/
+.navbaricons{
+    display: flex;
+    gap: 1rem;
+}
+
+
+/*search-bar*/
+.search-bar{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 80px;
+    backdrop-filter: blur(4px) saturate(180%);
+    color: aliceblue;
+    padding: .5rem 1rem;
+    display: flex;
+}
+
+/*words on the searchbox*/
+::placeholder{
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: .7;
+}
+
+/*dog icon button*/
+.btn{
+    border: 0;
+    width: 6px;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+
+}
+
+/*icon btn*/
+.imagecard{
+    position: relative;
+}
+
+/*button on images*/
+.btncard{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10rem;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 50%;
+    transform: translate(130%,20%);
+    display: none;
+    opacity: 0;
+}
+.imagecard:hover .btncard{
+    display: block;
+    opacity: 1;
+}
+
+/*dog icon button image*/
+.dogicon{
+    width: 25px;
+    padding: 0;
+
+}
+
+.debug{
+    border: 1px solid red !important;
+}
+
+/*form*/
+.form{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+
+}
+
+
+/*hover of tabs*/
+.topnav a:hover{
+    background-color: white;
+    color: black;
+
+}
+/*layout of images*/
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));   
+    gap: 1rem;
+    padding: 1rem;
+    
+  
+}
+
+/*images format*/
+img{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+@media screen and (max-width:30rem) {
+	.container{
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
